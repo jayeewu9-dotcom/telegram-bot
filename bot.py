@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 # ========== 1. 配置区：定义按钮和回复内容 ==========
 REPLY_CONTENT = {
     "💳 vcc services": "💳 VCC Services\n\nPowered by UL Digital, UL PAY is committed to delivering secure, convenient, and reliable virtual payment solutions to users worldwide, with: \n\n• Visa & Mastercard\n• Multi-Currency Top-Ups\n• Instant Card Issuance\n• 24/7 Smart CRM\n• Free API Access",
-    "🎫 sign up": "Ready to dive in?\n\nHit us up for your invite code and the best rates. We'll get you started in no time!\n\nExplore the platform: https://ulpay.io/\n\n✨ Click the contact button & pick your sales rep, let’s chat!",
+    "🎫 sign up": "Ready to dive in?\n\nHit us up for your invite code and the best rates. We'll get you started in no time!\n\nExplore the platform: https://ulpay.io/\n\nClick the contact button & pick your sales rep, let’s chat!",
     "📗 supported payment scenarios": "📗 Supported Payment Scenarios\n\n• Advertising payments (Facebook, Tiktok, Google, etc.)\n• AI Subscriptions (ChatGPT, Claude, Cursor, etc.)\n• Online Shopping\n• Travel Bookings\n\nMore features coming soon — Stay tuned!",
     "🌐 website": "UL PAY Website: https://ul-pay.com/",
     "⭐ official channel": "UL PAY Channel: https://t.me/ULPAYOfficial",
