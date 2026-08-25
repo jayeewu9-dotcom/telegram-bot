@@ -39,7 +39,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(REPLY_CONTENT[text])
     else:
         await update.message.reply_text(
-            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\nSuggestions or feedback?\nFeel free to reach out: @Jayee_uL"
+            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\n📩 Inquiries & Support: @Jayee_uL"
         )
 
 # ========== 4. 主程序 ==========
