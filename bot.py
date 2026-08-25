@@ -9,7 +9,7 @@ REPLY_CONTENT = {
     "📗 supported payment scenarios": "📗 Supported Payment Scenarios\n\n• Advertising payments (Facebook, Tiktok, Google, etc.)\n• AI Subscriptions (ChatGPT, Claude, Cursor, etc.)\n• Online Shopping\n• Travel Bookings\n\nMore features coming soon — Stay tuned!",
     "🌐 website": "UL PAY Website: https://ul-pay.com/",
     "⭐ official channel": "UL PAY Channel: https://t.me/ULPAYOfficial",
-    "🗳 contact": "🗳 Contact Us\n\nLenka\nTelegram: @Lenkahu999\nEmail: lenkahu723@gmail.com\n\nZoe\nTelegram: @Zoe_0831\nEmail: kh_01@uldigital.net\n\nJayee\nTelegram: @Jayee_uL\nEmail: kh_09@uldigital.net\n\nTony\nTelegram: @TONNNY321\nEmail: kh_14@uldigital.net\n\nChristine\nTelegram: @Christine_1030\nEmail: kh_20@uldigital.net\n\nElvis\nTelegram: @Elvis_uldigital\nEmail: kh_33@uldigital.net",
+    "🗳 contact": "🗳 Contact Us\n\nJay @Jayee_uL\nZoe @Zoe_0831\nTony @TONNNY321\nElvis @Elvis_uldigital\nLenka @Lenkahu999\nChristine @Christine_1030",
     "💶 pricing": "💶 Pricing\n\n• No monthly fees\n• Ultra-low issuance fees & commissions\n\nCustom solutions? Let's chat!"
 }
 
@@ -39,7 +39,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(REPLY_CONTENT[text])
     else:
         await update.message.reply_text(
-            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\n📩 Inquiries & Support: @Jayee_uL"
+            "Please select a service using the menu buttons below, or send /start to reopen the main menu."
         )
 
 # ========== 4. 主程序 ==========
