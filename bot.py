@@ -4,8 +4,8 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 # ========== 1. 配置区：定义按钮和回复内容 ==========
 REPLY_CONTENT = {
-    "🎫 sign up": "Ready to dive in?\n\nHit us up for your invite code and the best rates. We'll get you started in no time!\n\nExplore the platform: https://ulpay.io/\n\n💬 Contact us\n@Jayee_uL\n@Zoe_0831\n@TONNNY321\n@Christine_1030\n@Elvis_uldigital",
     "💳 vcc services": "💳 VCC Services\n\nPowered by UL Digital, UL PAY is committed to delivering secure, convenient, and reliable virtual payment solutions to users worldwide, with: \n\n• Visa & Mastercard\n• Multi-Currency Top-Ups\n• Instant Card Issuance\n• 24/7 Smart CRM\n• Free API Access",
+    "🎫 sign up": "Ready to dive in?\n\nHit us up for your invite code and the best rates. We'll get you started in no time!\n\nExplore the platform: https://ulpay.io/\n\n💬 Contact us\n@Jayee_uL\n@Zoe_0831\n@TONNNY321\n@Elvis_uldigital\n@Christine_1030",
     "📗 supported payment scenarios": "📗 Supported Payment Scenarios\n\n• Advertising payments (Facebook, Tiktok, Google, etc.)\n• AI Subscriptions (ChatGPT, Claude, Cursor, etc.)\n• Online Shopping\n• Travel Bookings\n\nMore features coming soon — Stay tuned!",
     "🌐 website": "UL PAY Website: https://ul-pay.com/",
     "⭐ official channel": "UL PAY Channel: https://t.me/ULPAYOfficial",
@@ -17,7 +17,7 @@ REPLY_CONTENT = {
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # 创建按钮布局（一行两个，共四行）
     keyboard = [
-        ["🎫 sign up", "💳 vcc services"],
+        ["💳 vcc services", "🎫 sign up"],
         ["📗 supported payment scenarios"],
         ["🌐 website", "⭐ official channel"],
         ["🗳 contact", "💶 pricing"]
@@ -39,7 +39,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(REPLY_CONTENT[text])
     else:
         await update.message.reply_text(
-            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\nWebsite: https://ul-pay.com/\nChannel: https://t.me/ULPAYOfficial\n\nSuggestions or feedback? Feel free to reach out: @Jayee_uL"
+            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\nSuggestions or feedback?\nFeel free to reach out: @Jayee_uL"
         )
 
 # ========== 4. 主程序 ==========
