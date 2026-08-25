@@ -1,5 +1,4 @@
 import os
-
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
@@ -12,7 +11,6 @@ REPLY_CONTENT = {
     "🗳 contact": "🗳 Contact Us\n\nLenka\nTelegram: @Lenkahu999\nEmail: lenkahu723@gmail.com\n\nZoe\nTelegram: @Zoe_0831\nEmail: kh_01@uldigital.net\n\nJayee\nTelegram: @Jayee_uL\nEmail: kh_09@uldigital.net\n\nTony\nTelegram: @TONNNY321\nEmail: kh_14@uldigital.net\n\nChristine\nTelegram: @Christine_1030\nEmail: kh_20@uldigital.net\n\nElvis\nTelegram: @Elvis_uldigital\nEmail: kh_33@uldigital.net",
     "💶 pricing": "💶 Pricing\n\n• No monthly fees\n• Ultra-low issuance fees & commissions\n\nCustom solutions? Let's chat!",
     "🧚🏻 about": "🧚🏻 About UL PAY\n\nPowered by UL Digital, UL PAY is committed to delivering secure, convenient, and reliable virtual payment solutions to users worldwide."
-
 }
 
 # ========== 2. 处理 /start 命令 ==========
@@ -34,15 +32,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ========== 3. 处理用户点击按钮/发送消息 ==========
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    text = update.message.text.lower()  # 获取用户输入并转为小写
+    text = update.message.text.lower()
     
-    # 如果用户点击的按钮在回复库里，就自动回复
+
     if text in REPLY_CONTENT:
         await update.message.reply_text(REPLY_CONTENT[text])
     else:
-        # 如果用户输入了其他文字，友好提示
         await update.message.reply_text(
-            "Please select a service using the menu buttons below, or send /start to reopen the main menu. "
+            "Please select a service using the menu buttons below, or send /start to reopen the main menu."
         )
 
 # ========== 4. 主程序 ==========
@@ -55,15 +52,6 @@ def main():
     
     app = Application.builder().token(TOKEN).build()
     
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    
-    print("Bot is running...")
-    app.run_polling()
-    
-    app = Application.builder().token(TOKEN).build()
-    
-    # 注册命令和消息处理器
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
