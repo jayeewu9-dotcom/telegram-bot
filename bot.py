@@ -39,7 +39,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(REPLY_CONTENT[text])
     else:
         await update.message.reply_text(
-            "Please select a service using the menu buttons below, or send /start to reopen the main menu."
+            "Please select a service using the menu buttons below, or send /start to reopen the main menu.\n\nUL PAY Website: https://ul-pay.com/\nUL PAY Channel: https://t.me/ULPAYOfficial"
         )
 
 # ========== 4. 主程序 ==========
